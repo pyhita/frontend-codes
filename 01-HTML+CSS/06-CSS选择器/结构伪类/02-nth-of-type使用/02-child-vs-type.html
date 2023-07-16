@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 采用nth-child选中 */
+    p:nth-child(2) {
+      color: aqua;
+      /* 选中错误了，选中的是Little */
+    }
+
+    /* 采用nth-of-type选中 */
+    p:nth-of-type(2) {
+      color: tomato;
+    }
+  </style>
+  
+</head>
+<body>
+  <section>
+    <h1>Words</h1>
+    <p>Little</p>
+    <p>Piggy</p>    <!-- We want this one -->
+ </section>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+
+      /* 现在我们想要小的div右边移动30px ？ */
+      /* padding-left: 30px; */
+      /* 现在我们想要小的div右边移动100px */
+      /* padding-left: 100px; */
+      /* 问题：这种设置会改版大div的width = padding + 200 = 230px */
+      /* padding-left: 50px; */
+      /* box-sizing: border-box; */
+    }
+
+    .container {
+      width: 100px;
+      height: 100px;
+      background-color: purple;
+
+      /* 第二种解决方式 */
+      margin-left: 50px;
+    }
+
+    /* 总结，问题：我们如何实现小div和大div的左边以及上边都有一定的间距 ？
+            回答：我们不管是使用margin还是padding都可以达到目的，但是从元素语义化的角度
+            来看，我们应该使用padding 来实现！
+    */
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <div class="container">
+
+    </div>
+  </div>
+</body>
+</html>

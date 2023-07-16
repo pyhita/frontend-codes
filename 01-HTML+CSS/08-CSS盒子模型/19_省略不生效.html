@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      /* 不生效原因，设置为inline-block之后，a元素并没有固定的宽度 */
+      display: inline-block;
+      text-decoration: none;
+      color: red;
+      width: 100%;
+    }
+
+
+
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: green;
+    }
+
+    /* 设置p一行 省略 */
+    .box .author p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="box">
+    <a href="#" class="author">
+      <p>
+        如果块级元素的底部线和父元素的底部线重叠，那么这个块级元素的margin-bottom值会传递给父元素
+      </p>
+      <!-- <a href="">百度一下</a> 浮点数 -->
+    </a>
+  </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+
+    .home {
+      font-size: 25px;
+    }
+
+    .box {
+      /* 浏览器默认设置字体大小是16px */
+      /* font-size: 30px; */
+      /* em：相对于父元素的size来说 */
+      font-size: 2em;
+    }
+
+    .box1 {
+      /* 不设置默认跟父元素一样，子元素会继承父元素   */
+      font-size: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="home">
+    <div class="box">我是DIV</div>
+
+    <div class="box1">我是DIV</div>
+  </div>
+</body>
+</html>

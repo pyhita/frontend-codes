@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .before {
+      color: red;
+      font-size: 30px;
+    }
+
+    .after {
+      color: blue;
+      font-size: 30px;
+    }
+
+    /* 通过伪元素实现 */
+    .item::before {
+      content: "321";
+      color: orange;
+      font-size: 30px; 
+    }
+
+    .item::after {
+      /* content: "cba"; */
+      /* content: url("../images/Python-logo-notext.svg.png"); */
+      content: "";
+
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background-color: red;
+      color: purple;
+      font-size: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <span class="before">123</span>
+    我是div
+    <span class="after">abc</span>
+  </div>
+
+  <div class="box2 item">我也是div</div>
+  <div class="box3 item">我也是div</div>
+  <div class="box4 item">我也是div</div>
+  
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+
+      /* 设置阴影 */
+      box-shadow: 5px 5px 10px blue;
+    }
+    /* 
+    5px:x轴的偏移量 5px：y轴的偏移量
+    10px：阴影向外扩散量 10px：印象继续向四周延伸
+    inset：印象向内部扩散
+    */
+    .box2 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+
+      /* 设置阴影 */
+      box-shadow: 5px 5px 10px 10px blue inset;
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="box1"></div>
+  <span>....</span>
+  <div class="box2"></div>
+</body>
+</html>

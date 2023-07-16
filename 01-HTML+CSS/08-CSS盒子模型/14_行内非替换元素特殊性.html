@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: #ff0;
+      color: white;
+
+      /* 内容：width/height不生效 */
+      width: 300px;
+      height: 300px;
+
+      /* padding：上下会被撑起来，但是不占据空间 */
+      /* 证明：div元素并没有被挤到下面 */
+      /* padding: 30px; */
+
+      /* border：上下会被撑起来，但是不占据空间 */
+      /* 特殊：上下会被撑起来，但是不占据空间 */
+      /* border: 50px solid red; */
+      /* margin：上下的margin不生效 */
+      margin: 50px;
+
+    }
+  </style>
+</head>
+<body>
+
+  <span class="box">
+    Hello Wrold
+  </span>
+  <div>divdivdiv</div>
+
+</body>
+</html>

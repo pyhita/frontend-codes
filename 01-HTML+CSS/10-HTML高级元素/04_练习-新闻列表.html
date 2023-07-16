@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <!-- 1 先完成html结构
+       2 重置样式
+       3 先整体后局部
+        * 顺序按照从上往下，从外往里
+      4 去除重复代码，将重复代码放入单独的class -->
+
+  <style>
+    ul > li {
+      margin: 30px 0;
+    }
+
+    ul > li > a {
+      display: inline-block;
+    }
+
+    /* 局部样式调整 */
+    ul > li .ranking {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      line-height: 24px;
+      text-align: center;
+      margin-right: 5px;
+
+      font-weight: bold;
+      color: #999;
+    }
+
+    /* 伪类，结构伪类 */
+    /* ul > li:nth-child(1)选中的是ul下面的第一个li，不是span */
+    /* 如果不加.ranking 相当于继承属性 会被上面的覆盖掉 */
+    ul > li:nth-child(1) .ranking {
+      color: red;
+    }
+    ul > li:nth-child(2) .ranking {
+      color: blue;
+    }
+    ul > li:nth-child(3) .ranking {
+      color: yellow;
+    }
+
+    ul > li .content {
+      display: inline-block;
+    }
+
+    ul > li .icon {
+      position: relative;
+      top: 2px;
+      left: 4px;
+
+      display: inline-block;
+      /* img不设置宽高，存在默认值，bgi不可以，会直接不显示 */
+      width: 16px;
+      height: 16px;
+    }
+
+    ul > li .hot {
+      background-image: url(../images/hot.92a15c5e.svg);
+    }
+
+    ul > li .new {
+      background-image: url(../images/new.b7973b24.svg);
+    }
+
+    a:hover {
+      color: blue;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <ul>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon new"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon hot"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    <li class="item">
+      <a href="#">
+        <span class="ranking">1</span>
+        <div class="content">
+          一花一木一世界，郭教授来了吗
+        </div>
+        <i class="icon"></i>
+      </a>
+    </li>
+    
+  </ul>
+
+</body>
+</html>

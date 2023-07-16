@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 行内非替换元素margin padding水平有效垂直无效，height width 无效 */
+    .no-replaced {
+      width: 50px;
+      height: 50px;
+      padding: 20px;
+      /* box-sizing: border-box; */
+      margin: 30px;
+
+      border: 1px solid #f00;
+    }
+
+    .replaced {
+      width: 50px;
+      height: 50px;
+      padding: 30px;
+      margin: 30px;
+    }
+
+    #beforeImage {
+      padding: 10px;
+      /* display: inline-block;  */
+      /* demo */
+      background: red
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <span class="no-replaced">行内非替换元素</span>
+  </div>
+  <div>
+    <input type="text" class="replaced" value="行内替换元素">
+  </div>
+
+  <span id="beforeImage">Foo bar</span>
+</body>
+</html>

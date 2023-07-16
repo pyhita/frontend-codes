@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    .item {
+      display: inline-block;
+      width: 234px;
+      height: 300px;
+
+      background-color: #fff;
+      text-align: center;
+      padding: 20px 25px;
+      box-sizing: border-box;
+    }
+
+    .item:hover {
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, .2);
+    }
+
+    /* 调整图片样式 */
+    .item img {
+      width: 160px;
+      height: 160px;
+    }
+
+    .item .heading {
+      margin-top: 10px;
+    }
+
+    .item .desc {
+      color: #999;
+
+      /* 单行显示省略号 */
+      /* 首先不换行 */
+      white-space: nowrap;
+      /* 超出部分隐藏 */
+      overflow: hidden;
+      /* 省略号 */
+      text-overflow: ellipsis;
+    }
+
+    .item .price {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .item .new {
+      color: #ff6700;
+    }
+
+    .item .old {
+      color: #b0b0b0;
+      text-decoration: line-through;
+    }
+  </style>
+
+</head>
+<body>
+  
+  <a href="https://www.mi.com/shop/buy/detail?product_id=18542" class="item" target="_blank">
+    <div class="ablum">
+      <img src="../images/xiaomi.webp" alt="">
+      <h3 class="heading">Redmi Note 12T Pro</h3>
+      <p class="desc">骁龙8+｜2K 高光直屏｜5500mAh+67W闪充</p>
+      <div class="price">
+        <span class="new">2339元起</span>
+        <span class="old">2499元</span>
+      </div>
+    </div>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box1 {
+      border: 1px solid red;
+      /* inline-heigth也可以设置上下边距，但那是内容的一部分，不是真正的边距 */
+      line-height: 40px;
+      display: inline-block;
+    }
+
+    .box2 {
+      border: 2px solid blue;
+      display: inline-block;
+
+      /* 通过padding设置内边距 */
+      padding-top: 30px;
+      padding-right: 30px;
+      padding-bottom: 30px;      
+      padding-left: 30px;
+      /* padding简写属性 */
+      padding: 40px 40px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box1">
+    我是box1元素
+  </div>
+  <div class="box2">
+    我是box2元素
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.css">
+  <style>
+    /* a元素没有固定的宽度 */
+    a {
+      display: block;
+    }
+
+    .item {
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    .item img {
+      width: 100%;
+      border-radius: 6px;
+    }
+
+    .item .info p {
+      font-size: 15px;
+      margin-top: 8px;
+    }
+
+    .item .info .author {
+      color: #999;
+      margin-top: 5px;
+    }
+
+    /* .item .info .anchor::before {
+      display: inline-block;
+      content: url(../images/bilibili.svg);
+
+      width: 10px;
+      height: 10px;
+      position: relative;
+      top: 2px;
+    } */
+
+    /* a元素没有固定的宽度，导致p元素的宽度也是无法固定的！ */
+    /* .item .info a { */
+      /* overflow: hidden; */
+      /* width: 100%; */
+    /* } */
+
+    .item .info .anchor img {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+
+      position: relative;
+      top: 4px;
+    }
+
+    .item .info p {
+      white-space: nowrap;
+      /* 保留两行设置 */
+      overflow: hidden;
+      text-overflow: ellipsis;
+      /* display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; */
+    }
+  </style>
+</head>
+<body>
+  
+
+  <div class="item">
+    <div class="ablum">
+      <a href="">
+        <img src="https://i1.hdslb.com/bfs/archive/cb5b0b25a903ce93a531dc8f3558b9f59c23b4a3.jpg@672w_378h_1c_!web-home-common-cover.avif" referrerpolicy="no-referrer" alt="">
+      </a>
+    </div>
+    <div class="info">
+      <a href="">
+        <p>1000块假面骑士福袋来辣！考验友情的时刻到了如果块级元素的底部线和父元素的底部线重叠，那么这个块级元素的margin-bottom值会传递给父元素</p>
+      </a>
+      <a href="" class="anchor">
+        <img src="../images/bilibili.svg" alt="">
+        <span class="nickname">銀河万丈</span>
+        <span class="date">3-20</span>
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>

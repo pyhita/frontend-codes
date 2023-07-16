@@ -1,0 +1,4 @@
+/* 通过import引入其他的css资源 */
+@import url(./style.css);
+@import url(./test.css);
+@import url(./item.css);
