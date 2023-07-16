@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 先看第几个元素，然后需要判断元素类型是不是li */
+    ul > li:nth-child(3) {
+      color: blue;
+    }
+    /* 第五个已经无法选中了 */
+    ul > li:nth-child(5) {
+      color: red;
+    }
+
+    /* 从所有符合类型的中选择第n个 */
+    ul > li:nth-of-type(5) {
+      color: orange;
+    }
+
+    ul > li:nth-last-child(1) {
+      color: chartreuse;
+    }
+
+    /* 选中html元素 */
+    :root {
+      font-size: 30px;
+    }
+
+    /* 选中空，没有子元素的 */
+    :empty {
+      width: 20px;
+      height: 20px;
+      background-color: red;
+    }
+  </style>
+</head>
+<body>
+  
+  <ul>
+    <li>列表内容1</li>
+    <li>列表内容2</li>
+    <li>列表内容3</li>
+    <li>列表内容4</li>
+    <span>我是span元素</span>
+    <li>列表内容5</li>
+    <li>列表内容6</li>
+  </ul>
+
+  <div>
+    <div>我是div元素</div>
+  </div>
+
+  <div>
+
+  </div>
+</body>
+</html>
