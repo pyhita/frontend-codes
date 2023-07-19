@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      background-color: red;
+    }
+
+    .box strong {
+      /* 一旦strong被设置为了absolute，那么不再向父元素汇报宽度和高度 
+      那么此时box的背景全部没有了，因为相当于内容没有了
+      */
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="box">
+    <strong>我是strong元素</strong>
+  </div>
+</body>
+</html>
