@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: #333;
+    }
+    .item {
+      width: 140px;
+      margin: 0 auto;
+
+    }
+
+    .item .top {
+      position: relative;
+    }
+
+    .item .top img {
+      vertical-align: top;
+    }
+
+    .item .top .cover {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      background-image: url(../images/music_sprite_01.png);
+      background-position: 0 0;
+    }
+
+    .item .top .info {
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      height: 27px;
+
+      font-size: 12px;
+      color: #ccc;
+      
+      background-image: url(../images/music_sprite_01.png);
+      background-position: 0 -537px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="item">
+    <div class="top">
+      <img src="../images/music_album01.jpg" alt="专辑封面">
+      <div class="cover">
+      </div>
+      <div class="info">
+        62万
+      </div>
+    </div>
+    <a href="#" class="bottom">
+      天气好的话，把耳机分给我一半吧
+    </a>
+  </div>
+</body>
+</html>
