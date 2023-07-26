@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .content {
+      /* width: 1200; */
+      width: 1190px;
+      background-color: orange;
+      height: 800px;
+      margin: 0 auto;
+    }
+
+    .box {
+      /* 父级元素盒子width = 子盒子的width + margin-left + margin-right */
+      margin-right: -10px;
+    }
+
+    .item {
+      width: 230px;
+      height: 322px;
+      background-color: purple;
+      color: #fff;
+
+      float: left;
+      margin-right: 10px;
+    }
+/* 
+    .item:nth-child(5n) {
+      margin-right: 0;
+    } */
+  </style>
+</head>
+<body>
+  
+  <div class="content">
+    <div class="box">
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+      <div class="item item1">1</div>
+      <div class="item item2">2</div>
+      <div class="item item3">3</div>
+      <div class="item item4">4</div>
+      <div class="item item5">5</div>
+    </div>
+  </div>
+</body>
+</html>
