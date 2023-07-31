@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .content {
+      width: 1190px;
+      background-color: purple;
+      margin: 0 auto;
+    }
+
+    .box {
+      margin-right: -10px;
+    }
+
+    .item {
+      width: 290px;
+      background-color: red;
+      float: left;
+      margin-right: 10px;
+    }
+
+    .item.left {
+      height: 370px;
+    }
+
+    .item.right {
+      height: 180px;
+      margin-bottom: 10px;
+    }
+
+    .box2 {
+      height: 200px;
+      background-color: green;
+    }
+
+    .line {
+      background-color: blue;
+      height: 10px;
+    }
+
+    .why::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+  </style>
+</head>
+<body>
+  
+
+  <div class="content why">
+    <div class="box">
+      <div class="item left"></div>
+      <div class="item left"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+      <div class="item right"></div>
+    </div>
+  </div>
+
+  <div class="line"></div>
+
+
+  </div>
+</body>
+</html>

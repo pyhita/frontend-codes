@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 500px;
+      height: 500px;
+      background-color: orange;
+
+      display: flex;
+      flex-flow: wrap;
+      align-items: center;
+      justify-content: space-around;
+      /* 很少用，因为默认父元素高度不固定，就是这样排列的 */
+      align-content: flex-start;
+    }
+
+    .item {
+      width: 120px;
+      height: 120px;
+      background-color: red;
+    }
+
+    .item1 {
+      flex-grow: 3;
+      background-color: green;
+    }
+
+    .item2 {
+      flex-grow: 2;
+      background-color: yellow;
+    }
+
+    .item3 {
+      flex-grow: 1;
+      background-color: purple;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+  </div>
+</body>
+</html>
