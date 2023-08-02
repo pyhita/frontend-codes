@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <!-- 第一种方式：html内部编写 -->
+  <button onclick="alert('点我弹窗了！')">点我弹窗1</button>
+  <button class="btn">点我弹窗2</button>
+  <button class="btn2">点我弹窗3</button>
+</body>
+
+<script src="./js/outer.js"></script>
+<script>
+  const ele = document.querySelector('.btn');
+  ele.onclick = function() {
+    alert("点我弹窗了！")
+  }
+</script>
+</html>
