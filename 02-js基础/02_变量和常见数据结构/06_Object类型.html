@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 1 对象类型
+    var book = {
+      name: "Good Book",
+      desc: "Bad Price",
+      oldPrice: 33,
+      newPrice: 44,
+    }
+
+    console.log(book);
+
+    // 2 获取属性值
+    console.log(book.name);
+
+    // 3 Null 类型
+    // 对象初始值
+    var book = {}
+    // 0 false "" -> 放在if中 默认都是false
+    // 但是book会被转成true，所以应该空对象初始化成null
+    var book2 = null
+    if (book) {
+      console.log(book);
+    }
+
+    if (book2) {
+      console.log(book2);
+    }
+
+    // 什么都不写 会被初始化成undefined
+    
+  </script>
+</body>
+</html>
