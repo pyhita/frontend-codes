@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 1 隐式转换，算数运算中通常会将其他类型转换成数字类型进行运算
+    var n1 = "3"
+    var n2 = "3"
+    var n3 = n1 * n2
+    console.log(typeof n3);
+
+    // 2 显式转换 Number()
+    var n4 = "33.4"
+    console.log(typeof Number(n4));
+
+    // 其他类型转成数字类型
+    console.log(Number(undefined))
+    console.log(Number(true));
+    console.log(Number(false));
+    console.log(Number(null));
+    console.log(Number('affd'));
+    console.log(Number("  11343  "));
+    console.log(Number(""));
+  </script>
+</body>
+</html>
