@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    function foo(fn) {
+      fn()
+    }
+
+    function bar() {
+      console.log("bar 函数执行了");
+    }
+
+    // 函数回调：通过fn在某一个时刻 调用函数
+    foo(bar)
+
+    // 2 回调案例
+    function request(url, callback) {
+      console.log("发送请求....");
+      console.log("花费很长时间，拿到相应结果");
+      var list = ["js", "js study"]
+      callback(list)
+    }
+
+    request("www.baidu.com", function(res) {
+      console.log(res);
+    })
+  </script>
+</body>
+</html>

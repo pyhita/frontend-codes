@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var f1 = ""
+    var f2 = 0
+
+    // == 类型不相同的情况下，会先讲运算元转成Number类型值 在进行比较
+    console.log(f1 == f2);
+
+    // 推荐使用=== 比较，类型不相同的情况下 会直接返回false
+    console.log(f1 === f2);
+  </script>
+</body>
+</html>

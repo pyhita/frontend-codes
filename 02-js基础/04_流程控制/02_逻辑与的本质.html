@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    
+    // 兑对象中的方法进行有值判断
+    var obj = {
+      name: "mike",
+      obj2: {
+        name: "hike",
+        eat: function() {
+          console.log("I am eating sth.");
+        }
+      }
+    }
+
+    // 如果我们现在想要调用eat方法，那么就有一个问题，如果obj对象为空或者obj2为空，或没有eat方法，就会报错
+    // obj = undefined
+    obj && obj.obj2 && obj.obj2.eat()
+  </script>
+</body>
+</html>

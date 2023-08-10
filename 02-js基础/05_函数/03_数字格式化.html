@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 传入一个数字 对这个数字进行格式化千 万
+
+    var playCount = 13687
+    
+
+    // 格式化数字
+    function formatCount(count) {
+      debugger
+      if (count > 10_0000_0000) {
+        count = Math.floor(count / 1_0000_000) + "亿"
+      } else if (count > 10_0000) {
+        count = Math.floor(count / 1_0000) + "万"
+      }
+
+      return count
+    }
+
+    console.log(formatCount(198989898));
+  </script>
+</body>
+</html>

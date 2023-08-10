@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    //  1 全局变量 定义之后 全局的任何地方都可以访问到
+    var message = "hello world"
+
+    // 在函数中访问
+    function sayHello() {
+      // 3 函数内部访问外部的变量  为 外部变量
+      console.log(message);
+      // 2 局部变量 只有函数内可以访问
+      var message = "nick"
+      function hi() {
+        var message = "内部的"
+        console.log("hi ", message);
+      }
+      hi()
+    }
+
+    sayHello()
+  </script>
+</body>
+</html>

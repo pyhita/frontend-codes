@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    // 1 函数可以被复制给变量
+    var foo1 = function() {
+      console.log("foo1");
+    }
+
+    // 2 让函数在变量之间来回传递
+    var foo2 = foo1
+    foo2()
+
+    // 3 函数可以当做另外一个函数的参数
+    function bar(fn) {
+      console.log('fn:', fn);
+      fn()
+    }
+    bar(foo2)
+
+    // 4 作为另外一个函数的返回值
+    function sayHello(name) {
+      function hi() {
+        console.log("hi, ", name);
+      }
+
+      return hi
+    }
+
+    // 5 函数存储到另外的数据结构
+    var obj = {
+      eating: function() {
+        console.log("eating");
+      }
+    }
+    obj.eating()
+
+    
+  </script>
+</body>
+</html>
