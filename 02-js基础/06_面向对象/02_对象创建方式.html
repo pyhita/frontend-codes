@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // 1 对象字面量
+    var obj = {
+      name: "kk",
+      age: 22,
+    }
+
+    // 2 new Object
+    var obj2 = new Object()
+    obj2.name = "kante"
+    
+    // 3 new其他类
+    function Person() {}
+    var obj3 = new Person()
+
+    // 查
+    console.log(obj.name);
+    // 增
+    obj.sex = "male"
+    console.log(obj.sex);
+    // 改
+    obj.sex = "female"
+    console.log(obj.sex);
+    // 减
+    delete obj.name
+    console.log(obj);
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    function foo(name, age) {
+      console.log(arguments);
+      console.log(this);
+    }
+
+    // 如果普通函数默认调用，那么this指向window
+    foo("mike", 22)
+
+    // 如果函数被某一个对象引用并且调用它，那么this默认指向对象
+    var obj = {
+      name: "kk",
+      running: function() {
+        console.log("run ...");
+        console.log(this);
+      }
+    }
+
+    obj.running()
+    
+    var fn = obj.running
+    fn() // window 只需要看调用方式：是obj调用还是说 对象调用
+  </script>
+</body>
+</html>

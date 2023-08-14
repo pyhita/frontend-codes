@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // 1 写多个对象字面量
+
+
+    // 2 工厂函数
+    function createPerson(name, age) {
+      var person = {}
+      person.name = name
+      person.age = age
+
+      return person
+    }
+
+    var p1 = createPerson("王源", 22)
+    var p2 = createPerson("王俊凯", 242)
+    console.log(p1, p2);
+
+    // 3 构造函数，为了与普通函数区别，一般首字母大写
+    function Person(name, age) {
+      this.name = name
+      this.age = age
+
+      this.eating = function() {
+        console.log("I am eating sth.");
+      }
+    }
+
+    var p3 = new Person("hhaha", 43)
+  </script>
+</body>
+</html>

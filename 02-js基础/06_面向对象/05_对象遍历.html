@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var info = {
+      name: "mike",
+      price: 232,
+      date: "2020"
+    }
+    // normal for loop
+    var infoKeys = Object.keys(info)
+    for (var i = 0; i < infoKeys.length; i++) {
+      console.log(info[infoKeys[i]]);
+    }
+    
+
+    // for in
+    for (var key in info) {
+      console.log(info[key]);
+    }
+
+    // for of
+    var arr = [1, 2, 3, 4]
+    for (var ele of arr) {
+      console.log(ele);
+    }
+  </script>
+</body>
+</html>
