@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    // Number构造函数
+    var num = 123
+
+    // Number就是一个对象，因此他有自己的属性
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+
+    // 类 方法，对象方法
+    var n = 1.343434534
+    console.log(n.toString());
+    // 二进制类型
+    var n2 = 100 
+    console.log(n2.toString(2), n2.toString(16), n2.toString(8));
+    
+
+    // 格式化数字，保留fixed 位，默认四
+    var pi = 3.121415926
+    console.log(pi.toFixed(2));
+
+    // 类 方法
+    var m1 = "123.3455"
+    console.log(Number.parseInt(m1));
+    console.log(Number.parseFloat(m1));
+    
+  </script>
+</body>
+</html>

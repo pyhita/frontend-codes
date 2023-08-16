@@ -8,18 +8,13 @@
 <body>
   
   <script>
-    var msg = "hello js"
-    console.log(msg.length);
-
-    function String(str) {
-      this.str = str
-      this.length = 11
-      this.func = function func() {
-        
-      }
-    }
-
-    
+    var nums = [5, 4, 3, 2, 1]
+    nums.sort(function(item1, item2) {
+      return item1 - item2
+    })
+    console.log(nums);
+    var reverseNums = nums.reverse()
+    console.log(reverseNums);
   </script>
 </body>
 </html>

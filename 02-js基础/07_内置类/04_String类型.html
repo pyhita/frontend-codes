@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+
+  <script>
+    var msg = "abcdefghijk"
+    // length
+    console.log(msg.length);
+    // chatAt
+    console.log(msg.charAt(4));
+    console.log(msg[4]);
+
+
+    // 字符串遍历
+    for (var i = 0; i < msg.length; i++) {
+      console.log(msg[i]);
+    }
+
+    // for of 遍历 -> 迭代器，可迭代操作
+    // 可迭代对象：字符串 数组
+    for (var ch of msg) {
+      console.log(ch);
+    }
+  </script>
+</body>
+</html>

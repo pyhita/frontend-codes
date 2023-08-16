@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    // 1 forEach
+    var names = ["kante", "jam", "nick"]
+    names.forEach(function(item, index, array) {
+      console.log(item, index, array);
+    })
+
+    // 2 myForEach
+    names.myForEach = function(fn) {
+      for (var i = 0; i < this.length; i++) {
+        fn(this[i], i, this)
+      }
+    }
+
+    names.myForEach(function(item, index, array) {
+      console.log(item, index, array);
+    })
+
+    //3 myForEach2
+    Array.prototype.myForEach = function(fn) {
+      for (var i = 0; i < this.length; i++) {
+        fn(this[i], i, this)
+      }
+    }
+
+    var cookies = ["defu", "malasong"]
+    cookies.myForEach(function(item, index, array) {
+      console.log(item, index, array);
+    })
+
+    // 4 自己实现find 函数
+    Array.prototype.myFind = function myFind(fn) {
+      for (var i = 0; i < this.length; i++) {
+        if (fn(this[i], i, this)) {
+          return this[i]
+        }
+      }
+    }
+
+    var cars = ["xuetiellong", "baoma", "benze"]
+    var findCar = cars.myFind(function(item, index, arr) {
+      return item == "benchi"
+    })
+    console.log(findCar);
+  </script>
+</body>
+</html>

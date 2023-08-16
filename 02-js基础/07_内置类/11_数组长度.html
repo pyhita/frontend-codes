@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var names = [1, 2, 3 ,4 ,5]
+    console.log(names.length);
+    // 数组扩容
+    names.length = 6
+    console.log(names);
+
+    // 数组缩容
+    names.length = 2
+    console.log(names);
+
+    // 清空数组
+    names.length = 0
+
+    names = [1, 2 ,3 ,4]
+    // 1 遍历方式1
+    for (var i = 0; i < names.length; i++) {
+      console.log(names[i])
+    }
+
+    // 2 for in
+    for (var index in names) {
+      console.log(index);
+    }
+
+    // 3 for of
+    for (var item of names) {
+      console.log(item);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    var msg = "hello world"
+    var subStr = "hello"
+
+    // 1 indexOf 方法
+    /**
+     * -1 搜索不到，找不到
+     * **/
+    console.log(msg.indexOf(subStr));
+    console.log(msg.indexOf("fdsfds"));
+
+
+    // es6 新增方法
+    console.log(msg.includes(subStr));
+    console.log(msg.startsWith(subStr));
+    console.log(msg.endsWith(subStr));
+    console.log(msg.replace("world", "yangtao"));
+
+  </script>
+</body>
+</html>

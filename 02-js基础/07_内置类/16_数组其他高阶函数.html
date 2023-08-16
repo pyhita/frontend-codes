@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+
+    // 1 forEach
+    // find findIndex
+    var names = ["kante", "nick", "morgen"]
+    names.forEach(function(item) {
+      // 默认是没有调用者的，直接调用，因此this就指向window
+      // 可以多穿一个参数，这样就会将this绑定到这个参数上
+      console.log(item, this);
+    }, {name: "haha", age: 22})
+
+    // 2 filter：过滤
+    var nums = [11, 22, 3, 4, 645, 90]
+    // 拿到所有的偶数
+    var evenNums = nums.filter(item => item % 2 === 0)
+    console.log(evenNums);
+
+    // 3 map 映射操作
+    var pingfangNums = nums.map(function(item) {
+      return item * item
+    })
+    console.log(pingfangNums);
+
+    // 4 reduce 操作：计算数组和
+    var sum = nums.reduce(function(preValue, item) {
+      return preValue + item
+    }, 0)
+    console.log(sum);
+
+    // 综合练习：过滤所有偶数，计算偶数平方，最后求和
+    var evenSum = nums
+    .filter(item => item % 2 === 0)
+    .map(item => item * item)
+    .reduce((preValue, item) => preValue + item, 0)
+    console.log(evenSum);
+
+
+    
+  </script>
+</body>
+</html>

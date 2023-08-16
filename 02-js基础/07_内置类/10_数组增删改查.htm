@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <script>
+    var names = ["why", "tao", "kante", "jam", "john", 'kyky']
+    // 1 查
+    console.log(names[0]);
+
+    // 2 改
+    names[0] = "debu"
+    console.log(names[0]);
+
+    // 3 增
+    names.push("new")
+    console.log(names);
+
+    // 4 删除
+    names.pop()
+    console.log(names);
+
+    // 头部添加和删除
+    names.unshift("top")
+    console.log(names);
+    names.shift()
+    console.log(names);
+
+    // splice方法：添加 删除 替换 任意位置
+    // start:开始位置 deleteCount：删除的个数
+    names.splice(1, 2)
+    console.log(names, "删除元素");
+    // 新增元素
+    names.splice(1, 0, "xxx", "yyy")
+    console.log(names, "添加元素");
+
+    // 替换元素
+    names.splice(1, 2, "zzz", "aaa")
+    console.log(names, "修改元素");
+
+    //
+  </script>
+</body>
+</html>

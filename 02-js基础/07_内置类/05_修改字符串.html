@@ -6,20 +6,14 @@
   <title>Document</title>
 </head>
 <body>
-  
+
   <script>
-    var msg = "hello js"
-    console.log(msg.length);
-
-    function String(str) {
-      this.str = str
-      this.length = 11
-      this.func = function func() {
-        
-      }
-    }
-
-    
+    var msg = "hello world"
+    // 1 .修改字符串
+    msg[0] = "h"
+    console.log(msg);
+    var MSG = msg.toUpperCase()
+    console.log(MSG);
   </script>
 </body>
 </html>

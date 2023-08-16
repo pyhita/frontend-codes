@@ -8,18 +8,10 @@
 <body>
   
   <script>
-    var msg = "hello js"
-    console.log(msg.length);
+    var now = new Date()
 
-    function String(str) {
-      this.str = str
-      this.length = 11
-      this.func = function func() {
-        
-      }
-    }
-
-    
+    console.log(now.toDateString());
+    console.log(now.toISOString());
   </script>
 </body>
 </html>

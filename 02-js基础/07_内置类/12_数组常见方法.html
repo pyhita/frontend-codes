@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+    var names = ["kante", "jam", "john", "xiaoxin"]
+    // 1 slice方法：不会修改原数组
+    var newNames = names.slice(0, 2)
+    console.log(newNames);
+
+    // 2 concat 方法 拼接数组
+    var n1 = ["xx", "yy", "zz"]
+    var n2 = ["ll", "hh"]
+    var n3 = n1.concat(n2)
+    console.log(n3);
+    var n4 = []
+    n4.push(...n1)
+    n4.push(...n2)
+    console.log(n4);
+
+    // 3 join 方法
+    var n5 = ["aa", "bb", "cc"]
+    console.log(n5.join("-"));
+
+    // 4 数组中查找元素
+    // 1 数组中存放的是简单类型
+      // 1.1 indexOf 不存在返回-1
+    var a1 = ["a", "b", "c"]
+    console.log(a1.indexOf("a"));
+
+      // 1.2 find方法
+    var students = [
+      {id: 101, name: "kante"},
+      {id: 102, name: "jam"},
+      {id: 103, name: "john"},
+      {id: 104, name: "mike"}
+    ]
+
+    var stu = students.find(function(item) {
+      if (item.id == 104) return true
+    })
+    console.log(stu);
+  </script>
+</body>
+</html>
