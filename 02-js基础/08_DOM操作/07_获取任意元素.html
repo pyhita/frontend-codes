@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="box">
+    <h1>我是标题</h1>
+    <div class="container">
+      <p>
+        我是段落，<span class="keyword">傻逼apple</span>
+      </p>
+      <h3 id="title">我是小标题</h3>
+    </div>
+  </div>
+
+  <script>
+    // 通过className来获取
+    var keyword = document.getElementsByClassName("keyword")
+    console.log(keyword[0]);
+    keyword[0].style.color = "#f00"
+
+    // 通过id获取
+    var hEl = document.getElementById("title")
+    console.log(hEl);
+
+    // 通过选择器获取
+    var keyword2 = document.querySelector(".keyword")
+    var keywords = document.querySelectorAll(".keyword")
+    keyword2.style.color = "#f0f"
+    // selector 获取的是一个NodeList，是一个可迭代对象
+    for (var el of keywords) {
+      console.log(el);
+    }
+  </script>
+</body>
+</html>

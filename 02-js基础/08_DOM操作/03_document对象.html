@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <!-- 我是注释。。。 -->
+  我是文本
+
+  <div class="div">哈哈哈哈</div>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  
+
+  <script>
+
+    // 1 获取节点的导航
+    var bodyEl = document.body
+    // 1.1 获取body所有子节点
+    var childNode = document.childNodes
+    // 1.2 获取body第一个子节点
+    var firstChild = bodyEl.firstChild
+    // 1.3 获取body第二个子节点
+    var secondChild = firstChild.nextSibling
+    // 1.4 获取body父节点
+    var parentNode = bodyEl.parentNode
+
+
+    // 2 元素之间的导航
+    var bodyEl = document.body
+    // 根据body元素获取所有的子元素
+    var childElements = bodyEl.children
+    console.log(childElements);
+    // 获取div
+    var b1 = bodyEl.firstElementChild
+    var b2 = bodyEl.children[0]
+    console.log(b1 == b2);
+
+    // 获取ul
+    var ulEL = b1.nextElementSibling
+    console.log(ulEL);
+  </script>
+</body>
+</html>
