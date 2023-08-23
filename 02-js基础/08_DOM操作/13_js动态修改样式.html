@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      color: red;
+      font-size: 20px;
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">我是div元素</div>
+  <script>
+    // 一旦点击div 修改div的样式
+    var boxEl = document.querySelector(".box")
+
+    boxEl.onclick = function() {
+      // 会覆盖原来的 box
+      // boxEl.className = "active"
+      // 方法二：通过classList 添加 不会覆盖！
+      boxEl.classList.toggle("active")
+    }
+  </script>
+</body>
+</html>

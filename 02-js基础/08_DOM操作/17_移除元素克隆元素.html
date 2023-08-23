@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="remove-btn">移除元素</button>
+  <button class="clone-btn">克隆元素</button>
+
+  <div class="box">
+    <h2>我是标题</h2>
+    <p>我是段落</p>
+  </div>
+
+  <script>
+    var removeBtnEl = document.querySelector(".remove-btn")
+    var cloneBtnEl = document.querySelector(".clone-btn")
+    var boxEl = document.querySelector(".box")
+
+    // 监听按钮点击
+    removeBtnEl.onclick = function() {
+      boxEl.remove()
+    }
+
+    cloneBtnEl.onclick = function() {
+      var cloneBoxEl = boxEl.cloneNode(true)
+      boxEl.after(cloneBoxEl)
+    }
+  </script>
+</body>
+</html>

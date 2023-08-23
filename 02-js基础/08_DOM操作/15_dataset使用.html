@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="box" data-name="kante" data-age="22">我是div啊 hh</div>
+
+  <script>
+    // 通过dataset 获取自定义属性
+    var boxEl = document.querySelector(".box")
+    console.log(boxEl.dataset.name);
+    console.log(boxEl.dataset.age);
+  </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box">
+    <div class="container">
+      container
+    </div>
+    <span class="keyword">关键字</span>
+    <a href="#" class="world">a标签</a>
+  </div>
+
+  <script>
+    var divEl = document.querySelector(".box")
+    console.log(divEl);
+    var divEl2 = divEl.children[0]
+    var spanEl = divEl.children[1]
+    var aEl = divEl.children[2]
+    console.log(aEl);
+    // 获取节点类型
+    for (var el of divEl.childNodes) {
+      console.log(el.nodeType);
+    }
+
+    // 获取节点名称
+    for (var el of divEl.children) {
+      console.log(el.nodeName);
+      console.log(el.tagName);
+    }
+
+    // data:针对非元素节点 获取数据
+    // innerHTML 
+    console.log(divEl.innerHTML);
+
+    // textContent
+    console.log(divEl.textContent);
+    // 设置文本
+    divEl.innerHTML = "<h1>innerHTML</h1>"
+  </script>
+</body>
+</html>

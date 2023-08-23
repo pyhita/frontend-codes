@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <h2 class="time"></h2>
+  <script>
+    function padLeft(content, count, padStr) {
+      padStr = padStr || "0"
+      count = count || 2
+
+      content = String(content)
+      return content.padStart(count, padStr)
+    }
+
+    var timeEl = document.querySelector(".time")
+    setInterval(function() {
+      var date = new Date()
+      var year = date.getFullYear()
+      var month = padLeft(date.getMonth() + 1)
+      var day = padLeft(date.getDate())
+      var hour = padLeft(date.getHours())
+      var minutes = padLeft(date.getMinutes())
+      var seconds = padLeft(date.getSeconds())
+
+      timeEl.textContent = `${year}-${month}-${day} ${hour}:${minutes}:${seconds}`
+    }, 1000)
+  </script>
+</body>
+</html>

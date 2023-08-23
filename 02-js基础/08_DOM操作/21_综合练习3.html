@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .countdown .time {
+      display: inline-block;
+      background-color: red;
+      color: #fff;
+      padding: 10px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="countdown">
+    <span class="time hour">03</span>
+    <span class="split">:</span>
+    <span class="time minute">03</span>
+    <span class="split">:</span>
+    <span class="time second">03</span>
+  </div>
+
+  <script src="./js/utils.js"></script>
+  <script>
+    var hourEl = document.querySelector(".hour")
+    var minuteEl = document.querySelector(".minute")
+    var secondEl = document.querySelector(".second")
+
+    var endDate = new Date()
+    endDate.setHours("24")
+    endDate.setMinutes("0")
+    endDate.setSeconds("0")
+
+    setInterval(function() {
+      var now = new Date()
+      var interval = Math.floor((endDate.getTime() - now.getTime()) / 1000)
+      // 将相差的秒数 改成 h m s 格式
+      var hour = Math.floor(interval / 3600)
+      var minute = Math.floor((interval / 60) % 60)
+      var second = Math.floor((interval % 60))
+
+      hourEl.textContent = padLeft(hour)
+      minuteEl.textContent = padLeft(minute)
+      secondEl.textContent = padLeft(second)
+    }, 1000)
+  </script>
+</body>
+</html>

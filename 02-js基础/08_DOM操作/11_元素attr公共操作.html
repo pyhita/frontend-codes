@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="box" id="box" name="kante" >我是box</div>
+  <script>
+    // 公共操作
+    var boxEl = document.querySelector(".box")
+    console.log(boxEl.hasAttribute("id"), boxEl.hasAttribute("name"));
+    console.log(boxEl.getAttribute("name"));
+    boxEl.setAttribute("name", "jam")
+    console.log(boxEl.getAttribute("name"));
+    boxEl.removeAttribute("name")
+    console.log(boxEl.getAttribute("name"));
+
+    var attrs = boxEl.attributes
+    for (var atr of attrs) {
+      console.log(atr.name, atr.value);
+    }
+  </script>
+</body>
+</html>

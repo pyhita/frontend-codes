@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="box1" id="jam" title="title" name="name" abc="abc">我是div</div>
+  <input type="text" checked="checked" value="kante">
+  <script>
+    // 1 标准attr可以通过property的方式进行操作，自定义的不可以
+    var boxEl =  document.querySelector(".box1")
+    console.log(boxEl);
+    console.log(boxEl.className, boxEl.id, boxEl.title, boxEl.name, boxEl.abc);
+    // 通过property获取的好处：可以保持原始类型，不像attr 只能拿到字符串
+    var inputEl = document.querySelector("input")
+    console.log(inputEl.getAttribute("checked"));
+    console.log(inputEl.checked);
+
+    // 2 attr 和 property 相互影响
+    console.log(inputEl.value);
+    inputEl.setAttribute("value", "liam")
+    console.log(inputEl.value);
+  </script>
+</body>
+</html>
