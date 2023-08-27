@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">按钮1</button>
+    <button class="btn2">按钮2</button>
+    <button class="btn3">按钮3</button>
+
+    <script>
+        var btn2El = document.querySelector(".btn2")
+        var btn3El = document.querySelector(".btn3")
+
+        // 1 方式一：
+        btn2El.onclick = function() {
+            console.log("按钮二 被点击了！")
+        }
+
+        // 2 方式二：
+        btn3El.addEventListener("click", function() {
+            console.log("按钮三 被点击了！")
+        })
+        
+    </script>
+</body>
+</html>

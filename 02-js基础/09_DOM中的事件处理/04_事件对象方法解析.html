@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            background-color: orange;
+        }
+
+        .box span {
+            width: 100px;
+            height: 100px;
+            background-color: khaki;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <a href="http://www.baidu.com">百度一下</a>
+
+    <div class="box"><span><button>按钮3</button></span></div>
+
+    <script>
+        //1 阻止默认行为
+        var aEl = document.querySelector("a")
+        aEl.onclick = function(event) {
+            console.log("百度一下")
+            event.preventDefault()
+        }
+
+        // 2 组织事件传播
+        var boxEl = document.querySelector("div")
+        var spanEl = document.querySelector("span")
+        var buttonEl = document.querySelector("button")
+
+        boxEl.onclick = function() {
+            console.log("box。。")
+        }
+
+        spanEl.onclick = function(event) {
+            console.log("spa ..")
+            event.stopPropagation()
+        }
+
+        buttonEl.onclick = document.querySelector("button")
+        buttonEl.onclick = function() {
+            console.log("button ....")
+        }
+    </script>
+</body>
+</html>

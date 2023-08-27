@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2">1111</div>
+    </div>
+    
+    <script>
+        var boxEl = document.querySelector(".box2") 
+        boxEl.onclick = function(event) {
+            console.log(this)
+            console.log(event.currentTarget)
+            console.log(event.target)
+            console.log(this === event.target)
+        }
+    </script>
+</body>
+</html>

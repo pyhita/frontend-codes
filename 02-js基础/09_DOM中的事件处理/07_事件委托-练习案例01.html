@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            font-size: 18px;
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    
+    <script>
+        // 1 点击就变红色
+        // var ulEl = document.querySelector("ul")
+        // ulEl.onclick = function(event) {
+        //     var source = event.target
+        //     console.log(source)
+        //     source.classList.add("active")
+        // }
+
+        // 2 只有一个变成红色
+        var ulEl = document.querySelector("ul")
+        var activeEle = null
+        ulEl.onclick = function(event) {
+            if (activeEle) {
+                activeEle.classList.remove("active")
+            }
+
+            var source = event.target
+            console.log(source)
+            source.classList.add("active")
+            activeEle = source
+        }
+    </script>
+</body>
+</html>

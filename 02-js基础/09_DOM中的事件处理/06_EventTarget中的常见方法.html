@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="box">
+        box ... 
+    </div>
+
+    <script>
+        var divEl = document.querySelector(".box")
+
+        var foo = function() {
+            console.log("button ....")
+        }
+
+        divEl.addEventListener("click", foo)
+
+        // 5s之后 移除监听函数
+        setTimeout(function() {
+            divEl.removeEventListener("click", foo)
+        }, 5000)
+    </script>
+</body>
+</html>

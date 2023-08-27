@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <button data-action="new">新建</button>
+        <button data-action="remote">移除</button>
+        <button data-action="search">搜索</button>
+
+    </div>
+
+    <script>
+        var boxEl = document.querySelector(".box")
+        // boxEl.onclick = function(event) {
+        //     var ele = event.target
+        //     if (ele.textContent === "新建") {
+        //         console.log("新建")
+        //     } else if (ele.textContent === "移除") {
+        //         console.log("移除")
+        //     } else {
+        //         console.log("搜索")
+        //     }
+        // }
+
+        boxEl.onclick = function(event) {
+            var btnEl = event.target
+            var action = btnEl.dataset.action
+            console.log(action)
+        }
+    </script>
+</body>
+</html>

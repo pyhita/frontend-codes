@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    
+    <script>
+        var box1El = document.querySelector(".box1")
+        var box2El = document.querySelector(".box2")
+
+        box1El.onclick = function(event) {
+            console.log(event.target)
+            console.log(event.currentTarget)
+            console.log(event.target === event.currentTarget)
+        }
+    </script>
+</body>
+</html>

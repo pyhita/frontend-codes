@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+        }
+
+        .box2 { 
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    
+    <script>
+        var body = document.body
+        var box1El = document.querySelector(".box1")
+        var box2El = document.querySelector(".box2")
+
+        // 1 设置事件捕获
+        body.addEventListener("click", function() {
+            console.log("body 捕获了点击事件")
+        }, true)
+
+        box1El.addEventListener("click", function() {
+            console.log("box1 捕获了")
+        }, true)
+
+        box2El.addEventListener("click",function() {
+            console.log("box2 不活了")
+        }, true)
+
+        // 2 设置事件监听
+        body.onclick = function() {
+            console.log("body 捕获到了")
+        }
+
+        box1El.onclick = function() {
+            console.log("box1 捕获到了")
+        }
+
+        box2El.onclick = function() {
+            console.log("box2 捕获到了")
+        }
+
+        console.log("lll")
+    </script>
+</body>
+</html>
