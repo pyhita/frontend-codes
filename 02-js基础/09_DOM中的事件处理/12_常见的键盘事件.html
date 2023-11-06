@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text"/> <button>按钮</button>
+
+    <script>
+        // 三种键盘事件
+        // var inputEl = document.querySelector("input")
+
+        // inputEl.onkeyup = function(event) {
+        //     console.log("keyup")
+        // }
+
+        // inputEl.onkeypress = function(event) {
+        //     console.log("keypress")
+        // }
+
+        // inputEl.onkeydown = function(event) {
+        //     console.log("keydown")
+        // }
+
+        // 模拟浏览器搜索功能
+        // 按钮可以进行搜索
+        var intputEl = document.querySelector("input")
+        var buttonEl = document.querySelector("button")
+
+        buttonEl.onclick = function(event) {
+            console.log("开始搜索！")
+        }
+
+        // 2 回车进行搜索
+        intputEl.onkeyup = function(event) {
+            console.log(event.key, event.code)
+            if (event.code === "Enter") {
+                console.log("开始搜索！")
+            }
+        }
+
+        // 3 按下s 聚焦到搜索框
+ 
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            display: flex;
+            width: 50px;
+        }
+
+        .box button {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <button>新增</button>
+        <button>查询</button>
+        <button>删除</button>
+    </div>
+
+    <script>
+        // 实现鼠标移除，打印相应的文字
+
+        // 1 第一种实现：监听全部的子元素
+        // var btns = document.querySelectorAll("button")
+        // for (var btn of btns) {
+        //     btn.onmouseenter = function(event) {
+        //         console.log(event.target.textContent)
+        //     }
+        // }
+
+        // 2 第二种实现，根据事件的传递机制，只监听父元素
+        var boxEl = document.querySelector(".box")
+        boxEl.onmouseover = function(event) {
+            if (event.target.tagName == "BUTTON") {
+                console.log(event.target.textContent)
+            }
+        }
+
+
+    </script>
+</body>
+</html>

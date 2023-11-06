@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            margin: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box2 {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <span class="box2"></span>
+    </div>
+
+    <script>
+        var boxEl = document.querySelector(".box")
+        var spanEl = document.querySelector(".box2")
+
+        // 方式一：mouseenter 和 mouseleave
+        // boxEl.onmouseenter = function(e) {
+        //     console.log("mouse enter")
+        // }
+
+        // boxEl.onmouseleave = function(e) {
+        //     console.log("mouse leave")
+        // }
+
+        // 方式二：mouseover 和 mouseout
+
+        boxEl.onmouseover = function(e) {
+            console.log("mouse over")
+        }
+
+        boxEl.onmouseout = function(e) {
+            console.log("mouse out")
+        }
+    </script>
+</body>
+</html>

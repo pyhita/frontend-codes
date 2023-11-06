@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    
+    <script>
+        // 鼠标事件
+        var boxEl = document.querySelector(".box")
+        // 鼠标移入事件 
+        boxEl.onmouseenter = function() {
+            console.log("鼠标进来了")
+        }
+
+        // 鼠标移除事件
+        boxEl.onmouseleave = function() {
+            console.log("鼠标移出事件")
+        }
+
+        // 
+        boxEl.onmousedown = function() {
+            console.log("鼠标按下事件")
+        }
+
+        // 鼠标松开事件
+        boxEl.onmouseup = function() {
+            console.log("鼠标松开事件")
+        }
+
+        // 鼠标右键事件
+        boxEl.oncontextmenu = function() {
+            console.log("鼠标右键事件")
+        }
+
+        // 鼠标移动事件
+        boxEl.onmousemove = function() {
+            console.log("鼠标移动事件")
+        }
+
+        
+
+    </script>
+</body>
+</html>
