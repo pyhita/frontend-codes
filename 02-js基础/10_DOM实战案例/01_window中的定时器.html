@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+    function foo() {
+        console.log("foo 被调用了")
+    }
+
+    function bar() {
+        console.log("bar 被调用了 ")
+    }
+    // 1 setTimeout
+    var tiemeoutId = window.setTimeout(foo, 3000)
+    // 取消定时调用
+    clearTimeout(tiemeoutId)
+
+    // 2 setInterval
+    var intervalId = window.setInterval(bar, 5000)
+
+    clearInterval(intervalId)
+</script>
+
+</body>
+</html>
