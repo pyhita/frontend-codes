@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <div id="app">
+
+  </div>
+</head>
+<body>
+<script src="./lib/vue.js"></script>
+<script>
+  const app = Vue.createApp({
+    template: `
+      <h2>{{counter}}</h2>
+      <div>
+        <button @click="inc">Inc</button>
+        <button @click="dec">Dec</button>
+      </div>
+    `,
+    data: function () {
+      return {
+        counter: 0
+      }
+    },
+    methods: {
+      inc: function () {
+        this.counter++
+      },
+      dec: function () {
+        this.counter--
+      }
+    }
+  })
+
+  app.mount("#app")
+
+</script>
+</body>
+</html>
