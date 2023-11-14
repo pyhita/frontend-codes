@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<script>
+    // 前端路由的核心：修改了URL 但是页面不刷新
+     // 1 修改hash值 2 修改history
+
+    // 1 history 属性
+    console.log(history.length)
+    console.log(history.state)
+
+    // 2 修改history
+    // 打开新的地址 但是不刷新页面 ！
+    history.pushState({"name": "kante"}, "", "/why")
+    history.forward()
+    history.back()
+    history.go(2 )
+
+</script>
+
+</body>
+</html>

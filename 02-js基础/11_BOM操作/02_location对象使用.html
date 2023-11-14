@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button class="assign">打开新的网页</button>
+    <button class="replace">替换网页</button>
+    <button class="reload">重新加载</button>
+<script>
+
+    // 1 完整的URL
+    console.log(location.href)
+
+    // 2 获取部分信息
+    console.log(location.host)
+    console.log(location.hostname)
+    console.log(location.port)
+    console.log(location.search)
+    console.log(location.hash)
+    console.log(location.pathname)
+
+    // 3 常用方法
+    var btn1 = document.querySelector(".assign")
+    var btn2 = document.querySelector(".replace")
+    var btn3 = document.querySelector(".reload")
+
+    btn1.onclick = function () {
+        location.assign("http://www.baidu.com")
+    }
+    btn2.onclick = function () {
+        location.replace("http://www.baidu.com")
+    }
+    btn3.onclick = function () {
+        location.reload()
+    }
+
+    // 4 URLSearchParams
+    var queryString = "?name=kante&age=22&height=1.88"
+    var qs = new URLSearchParams(queryString)
+
+    console.log(qs.get("name"))
+    console.log(qs.get("age"))
+    console.log(qs.get("height"))
+
+
+
+
+</script>
+</body>
+</html>

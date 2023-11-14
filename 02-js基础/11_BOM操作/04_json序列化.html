@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    var obj = {
+        name: "kante",
+        age: 22,
+        o: {
+            test: "test"
+        }
+    }
+
+    // 1 序列化
+    localStorage.setItem("obj", JSON.stringify(obj))
+
+    // 2 反序列化
+    var json = localStorage.getItem("obj")
+    var newObj = JSON.parse(json)
+    console.log(newObj.name)
+
+    // 3 replace参数
+    var resStr = JSON.stringify(obj, function (key, value) {
+        if (key == "name") {
+            return "coderwhy"
+        }
+        return value
+    })
+
+    console.log(resStr)
+
+    // 4 prase补充
+    JSON.parse(json, function (key, value) {
+        if (key === "age") {
+            return value + 2
+        }
+
+        return value
+    })
+</script>
+</body>
+</html>
