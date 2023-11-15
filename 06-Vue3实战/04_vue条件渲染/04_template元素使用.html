@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <template v-if="names.length > 0">
+            <ul>
+                <li v-for="item in names">{{item}}</li>
+            </ul>
+        </template>
+        <h2 v-else>没有数据！</h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                names: ['aaa', 'bbbb', 'cccc']
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <!-- 1 绑定img src属性 -->
+        <img v-bind:src="imgUrl" alt="">
+
+        <!-- 2 绑定a超链接 -->
+        <a v-bind:href="href">百度一下</a>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                imgUrl: "http://p1.music.126.net/RT2riQtumi07R8XjSTCkdw==/109951169053020914.jpg?imageView&quality=89",
+                href: "https://www.baidu.com"
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

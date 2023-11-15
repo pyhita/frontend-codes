@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <div v-memo="[name]">
+            <h2>{{name}}</h2>
+            <h2>{{age}}</h2>
+            <h2>{{height}}</h2>
+        </div>
+        <button @click="updateInfo">更新</button>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                name: "kante",
+                age: 22,
+                height: 1.00
+            }
+        },
+        methods: { 
+            updateInfo() {
+                this.name = 23
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

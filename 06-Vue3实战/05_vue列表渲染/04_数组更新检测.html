@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <button @click="changeArray">增加</button>
+        <ul>
+            <li v-for="item in names">{{item}}</li>
+        </ul>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                names: ['kante', 'xxxx', 'zzzz']
+            }
+        },
+        methods: {
+            changeArray() {
+                this.names.push('liam')
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

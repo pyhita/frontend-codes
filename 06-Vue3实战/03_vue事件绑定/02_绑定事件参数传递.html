@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <button @click="buttonClick">按钮1</button>
+        <button @click="buttonClick2('why', age)">按钮2</button>
+        <!-- 想要明确获取event 对象？$event -->
+        <button @click="buttonClick3('why', age, $event)">按钮3</button>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                age: 22
+            }
+        },
+        methods: {
+            buttonClick(event) {
+                console.log(event)
+            },
+            buttonClick2(name) {
+                console.log(name)
+            },
+            buttonClick3(name, age, event) {
+                console.log(event)
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

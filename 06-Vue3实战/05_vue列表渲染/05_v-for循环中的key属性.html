@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <ul>
+            <li v-for="item in letters" :key="item">{{item}}</li>
+        </ul>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                letters: [1, 2, 3, 4, 5]
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <h2>电影列表</h2>
+        <ul>
+            <li v-for="(item, index) in movies">{{item}} - {{index + 1}}</li>
+        </ul>
+        <ul>
+            <li v-for="(item, index) in products">{{item.name}} - {{item.price}}</li>
+        </ul>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                movies: ["大户西游", "熊出没", "X战警"],
+                products: [
+                    {id: 11, name: 'kante', price: 33.3, desc: 'xxxx'},
+                    {id: 11, name: 'kante', price: 33.3, desc: 'xxxx'},
+                    {id: 11, name: 'kante', price: 33.3, desc: 'xxxx'}
+                ]
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

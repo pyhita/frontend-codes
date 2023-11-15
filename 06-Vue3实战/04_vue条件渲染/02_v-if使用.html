@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <div class="info">
+            <ul v-if="Object.keys(infos).length">
+                对象不为空
+            </ul>
+        </div>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                infos: {name: 'kante', age: 22}
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <div class="box">
+            <!-- stop是修饰符，阻止事件进行冒泡 -->
+            <button @click.stop="buttonClick">按钮</button>
+        </div>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world"
+            }
+        },
+        methods: {
+            buttonClick() {
+
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

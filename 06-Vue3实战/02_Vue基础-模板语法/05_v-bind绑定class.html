@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .active {
+            color: red;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <!-- 支持对象语法 -->
+        <!-- <button :class="isActive ? 'active' : ''">我是按钮</button> -->
+        <button :class="{active: isActive}" @click="changeColor">我是按钮</button>
+
+        <!-- 支持数组语法 -->
+        <button :class="['abc', '{active: isActive}', 'class']">Hello Array</button>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                isActive: false,
+                class: 'why'
+            }
+        },
+        methods: {
+            changeColor() {
+                this.isActive = !this.isActive
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

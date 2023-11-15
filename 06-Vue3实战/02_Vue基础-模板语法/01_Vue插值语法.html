@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <h2>{{ counter * 2 }}</h2>
+        <h2>{{infos.split(" ")}}</h2>
+        <h2>{{counter > 2 ? "大于2" : "小于2"}}</h2>
+        <!-- 调用methods的函数 -->
+        <h2>{{formatDate("2222")}}</h2>
+        <h2></h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                counter: 2,
+                infos: "xxx yyy zzz"
+            }
+        },
+        methods: {
+            formatDate(date) {
+                return "2022 2 2" + date
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

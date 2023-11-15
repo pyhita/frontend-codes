@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <div>
+            <button @click="showPicture">切换</button>
+        </div>
+        <div v-show="show">
+            <img src="http://p1.music.126.net/Z5eM8JmzjPzWkUtNFOGe0A==/109951169054972248.jpg?imageView&quality=89" alt="" >
+        </div>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                show: true
+            }
+        },
+        methods: {
+            showPicture() {
+                this.show = !this.show
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

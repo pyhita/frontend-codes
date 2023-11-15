@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .box {
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <div class="box" @click="divClick"></div>
+        <button @click="counter++">+1</button>
+
+        <div @mousemove="move">xxxx</div>
+        <div v-on="{click: divClick, mousemove: move}"></div>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                counter: 0
+            }
+        },
+        methods: {
+            divClick() {
+                console.log("xxxxxxxx")
+            },
+            move() {
+                console.log("move ... ")
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

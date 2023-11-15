@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <!-- 动态类型绑定Style 必须是对象类型 -->
+        <h2 :style="{color: fontColor, 'font-size': '30px'}">哈哈哈哈哈</h2>
+        <!-- 动态绑定属性 属性是一个对象 -->
+        <h2 :style="styleObj1">xxxxx</h2>
+        <!-- 动态绑定一个数组 -->
+        <h2 :style="[styleObj1, styleObj2]">zzzzzz</h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                fontColor: 'blue',
+                styleObj1: {
+                    fontSize: '30px',
+                    color: 'blue'
+                },
+
+                styleObj2: {
+                    fontSize: '30px',
+                    color: 'blue'
+                },
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>
