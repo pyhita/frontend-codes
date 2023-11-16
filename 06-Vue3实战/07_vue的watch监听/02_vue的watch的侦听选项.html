@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <button @click="changeTitle">按钮</button>
+        <h2>{{title.name}}</h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: {name: 'kobe'}
+            }
+        },
+
+        methods: {
+            changeTitle() {
+                this.title.name = "xxxxx"
+            }
+        }, 
+
+        watch: {
+            // 监听对象属性的变化 
+            title: {
+                handler(newValue, old) {
+                    console.log(newValue, old)
+                    console.log(newValue === old)
+                },
+                // 深度监听
+                deep: true,
+                // 第一次执行代码的时候 就执行监听器
+                immediate: true
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <h2>{{fullname}}</h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world"
+            }
+        },
+        
+        computed: {
+            fullname: {
+                get() {
+                    return this.title
+                }
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

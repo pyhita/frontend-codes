@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <button @click="changeMessage">切换数据</button>
+        <button @click="changeInfo">切换info</button>
+        <h2>{{title}}</h2>
+        <h2>{{info}}</h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                info: {name: 'kante', age: 33}
+            }
+        },
+
+        methods: {
+            changeMessage() { 
+                this.title = 'message .... '
+            },
+            
+            changeInfo() {
+                this.info = {name: 'liam'}
+            }
+        },
+
+        watch: {
+            // 对象的话 拿到的是proxy对象
+            title(newValue, oldValue) {
+                console.log("title changed!", newValue, oldValue)
+            },
+            
+            info(newObj, oldObj) {
+                console.log(newObj, oldObj)
+                console.log(Vue.toRaw(newObj))
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

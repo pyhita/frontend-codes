@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <div id="app">
+        <h2>{{fullname}}</h2>
+        <h2>{{myName}}</h2>
+        <h2>{{score}}</h2>
+        <h2></h2>
+    </div>
+</head>
+<body>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                letter: "my name is kante",
+                score: 33
+            }
+        },
+        computed: {
+            fullname() {
+                return "Hello " + "World"
+            },
+
+            myName() {
+                return this.letter.split(" ").reverse().join(" ")
+            },
+            
+            score() {
+                return this.score > 60 ? "及格" : "不及格"
+            }
+
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>

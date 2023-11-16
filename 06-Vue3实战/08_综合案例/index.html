@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+        }
+
+        .active {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <template v-if="books.length > 0">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>书籍名称</th>
+                        <th>出版日期</th>
+                        <th>价格</th>
+                        <th>购买数量</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="(item, index) in books" 
+                    :key="item.id" 
+                    :class="{active: index === currentIndex}"
+                    @click="liClick(index)">
+                        <td>{{index + 1}}</td>
+                        <td>{{item.name}}</td>
+                        <td>{{item.date}}</td>
+                        <td>{{formatPrice(item.price)}}</td>
+                        <td>
+                            <button @click="dec(index)" :disabled="item.count <= 1">-</button>
+                            {{item.count}}
+                            <button @click="inc(index)" :disabled="item.count <= 1">+</button>
+                        </td>
+                        <td>
+                            <button @click="remove(index)">移除</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>总价： {{formatPrice(totalPrice)}}</h2>
+        </template>
+        <h2 v-else>购物车为空!</h2>
+        
+        
+    </div>
+
+<script src="../lib/vue.js"></script>
+<script src="./data/data.js"></script>
+<script>
+    const app = Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                books,
+                currentIndex: -1,
+            }
+        },
+
+        computed: {
+            totalPrice() {
+                return this.books.reduce((prev, curr) => {
+                    return prev + curr.price * curr.count
+                }, 0)
+            }    
+        },
+
+        methods: {
+            formatPrice(price) {
+                return "￥ " + price
+            },
+
+            dec(index) {
+                // console.log(index)
+                this.books[index].count--
+            },
+
+            inc(index) {
+                // console.log(index)
+                this.books[index].count++
+            },
+
+            remove(index) {
+                this.books.splice(index, 1)
+            },
+
+            liClick(index) {
+                this.currentIndex = index
+            }
+        }
+    })
+
+    app.mount("#app")
+
+</script>
+</body>
+</html>
