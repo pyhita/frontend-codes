@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <nav-item>
+
+        </nav-item>
+        <product-item>
+
+        </product-item>
+    </div>
+
+    <template id="nav">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+    </template>
+
+    <template id="product">
+        <div>
+            <h2>{{header}}</h2>
+            <p>商品不贵</p>
+        </div>
+    </template>
+<script src="../lib/vue.js"></script>
+<script>
+    const app = Vue.createApp({})
+    
+
+    const productItem = {
+        template: "#product",
+        data() {
+            return {
+                header: "MacOS 1.10"
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+
+        },
+
+        watch: {
+
+        }
+    }
+
+    const navItem = {
+        template: "#nav"
+    }
+    
+    app.component("product-item", productItem)
+    app.component("nav-item", navItem)
+    app.mount("#app")
+</script>
+</body>
+</html>

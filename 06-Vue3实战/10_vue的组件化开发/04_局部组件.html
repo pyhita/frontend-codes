@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+        <product-item>
+
+        </product-item>
+    </div>
+
+    <template id="product">
+        <h2>我是产品...</h2>
+    </template>
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.createApp({
+        components: {
+            ProductItem: {
+                template: "#product"
+            }
+        },
+
+        data () {
+            return {
+                title: "hello world"
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            
+        }
+    }).mount("#app")
+
+
+</script>
+</body>
+</html>

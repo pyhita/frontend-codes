@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{title}}</h2>
+
+            <!-- 使用组件 -->
+        <product-item>
+        </product-item>
+    </div>
+
+    <template id="product">
+        <h2>我是组件</h2>
+    </template>
+<script src="../lib/vue.js"></script>
+<script>
+    // 1 根组件
+    const App = {
+        data () {
+            return {
+                title: "hello world"
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            
+        }
+    }
+
+    // 2 product组件
+    const productItem = {
+        template: "#product "
+    }
+
+    // 3 创建app
+    const app = Vue.createApp(App)
+
+
+    // 4 注册全局组件
+    app.component("product-item", productItem)
+
+    app.mount("#app")
+</script>
+</body>
+</html>
