@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <label for="cc">
+            <input type="checkbox" id="cc" v-model="hobbies" value="a">同意
+        </label>
+        <label for="aa">
+            <input type="checkbox" id="aa" v-model="hobbies" value="b">同意
+        </label>
+        <label for="bb">
+            <input type="checkbox" id="bb" v-model="hobbies" value="c">同意
+        </label>
+        <h3>{{hobbies}}</h3>
+    </div>
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                isAgree: false,
+                hobbies: []
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            
+        }
+    }).mount("#app")
+
+
+</script>
+</body>
+</html>

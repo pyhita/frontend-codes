@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <textarea cols="30" rows="30" v-model="message"></textarea>
+
+        <p>{{message}}</p>
+    </div>
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                message: "fds"
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            
+        }
+    }).mount("#app")
+
+
+</script>
+</body>
+</html>

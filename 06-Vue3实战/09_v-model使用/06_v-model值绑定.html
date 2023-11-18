@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <select multiple v-model="fruits" size="3">
+            <option v-for="item in allFruits" 
+            :value="item.value" 
+            :key="item.value">{{item.text}}</option>
+        </select>
+        <h2>{{fruits}}</h2>
+
+        <template v-for="item in allHobbies" :key="item.value">
+            <label :for="item.value">
+                <input type="checkbox" :id="item.value" :value="item.value" v-model="hobbies"> {{item.text}}
+            </label>
+        </template>
+        <h2>{{hobbies}}</h2>
+    </div>
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                allFruits: [
+                    {value: 'apple', text: '苹果'},
+                    {value: 'orange', text: '橘子'},
+                    {value: 'banana', text: '香蕉'}
+                ],
+                fruits: [],
+                allHobbies: [
+                    {value: "sing", text: '唱'},
+                    {value: "jump", text: '跳'}
+                ],
+                hobbies: []
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            
+        }
+    }).mount("#app")
+
+
+</script>
+</body>
+</html>

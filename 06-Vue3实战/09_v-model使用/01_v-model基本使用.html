@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message" @input="inputChange"/> <button>Search</button>
+    </div>
+<script src="../lib/vue.js"></script>
+<script>
+    Vue.createApp({
+        data () {
+            return {
+                title: "hello world",
+                message: "hello world"
+            }
+        },
+
+        computed: {
+
+        },
+
+        methods: {
+            inputChange() {
+                console.log(this.message)
+            }
+        }
+    }).mount("#app")
+
+
+</script>
+</body>
+</html>
