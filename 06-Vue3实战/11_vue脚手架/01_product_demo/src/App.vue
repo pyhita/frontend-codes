@@ -1,9 +1,6 @@
 <template>
     <h2>{{ msg }}</h2>
-
-    <product-item>
-        
-    </product-item>
+    <product-item></product-item>
 </template>
 
 <script>
