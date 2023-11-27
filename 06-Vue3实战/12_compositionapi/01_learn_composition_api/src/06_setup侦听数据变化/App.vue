@@ -10,7 +10,7 @@ import {ref, watch, reactive, watchEffect} from "vue"
 
 export default {
 
-    setup() {
+    setup() {   
         const message = ref("Hello World")
 
         const info = reactive({
