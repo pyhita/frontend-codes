@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="id">
+        <a href="/home">Home Page </a>
+        <a href="/about">About Page</a>
+        <div class="content"></div>
+    </div>
+</head>
+
+<script>
+    const contentEl = document.querySelector(".content")
+    const aEls = document.querySelectorAll("a")
+
+
+    // 监听所有的a元素的点击
+    for (let ael of aEls) {
+        ael.addEventListener("click", (event) => {
+            event.preventDefault()
+            const href = ael.href
+            console.log(href)
+            history.pushState({}, "", href)
+            historyChange()
+        })
+    }
+    
+    function historyChange() {
+        switch(location.pathname){
+            case "/home":
+                contentEl.innerHTML = "Home"
+                break
+            case "/about":
+                contentEl.innerHTML = "About"
+                break
+            default:
+                contentEl.innerHTML = "Default"
+    }
+}
+
+</script>
+<body>
+    
+</body>
+</html>
