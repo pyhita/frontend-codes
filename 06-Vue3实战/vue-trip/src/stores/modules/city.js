@@ -4,7 +4,10 @@ import {getCityAll} from "@/services";
 
 const useCityStore = defineStore("city", {
     state: () => ({
-        cityAll: {}
+        cityAll: {},
+        currentCity: {
+            cityName: "上海"
+        }
     }),
 
     actions: {
